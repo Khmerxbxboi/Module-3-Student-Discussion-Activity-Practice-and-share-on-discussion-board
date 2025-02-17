@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sodaro Application 0.5</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .animated-box {
+            width: 750px;
+            height: 450px;
+            background-image: url('Sodaro_001.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: bgChange 6s infinite alternate ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .animated-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.1);
+        }
+
+        @keyframes bgChange {
+            0% {
+                background-image: url('Sodaro_001.jpg');
+            }
+            50% {
+                background-image: url('Sodaro_002.jpg');
+            }
+            100% {
+                background-image: url('Sodaro_003.jpg');
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sodaro Prototype 0.5</h1>
+        <div class="animated-box"></div>
+        <p><b>Note:</b> This is my Grad Thesis Application to read human and news behavior using API Data. I want to share this to the class.</p>
+        <p>Hello World!</p>
+        <p>These paragraphs are styled with CSS I run this well!I upgraded this also!</p>
+        <p>This page has a light blue background color for this HTML website </p>
+    </div>
+</body>
+</html>
